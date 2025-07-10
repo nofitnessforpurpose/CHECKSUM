@@ -23,7 +23,7 @@ Changes may arise for example due to corruption, physical read / write errors or
 The CHKSUM program contained in the repository is configured to calculate a check sum for data packs B, C or D of a Psion Organiser 2 device, as selected by the user.  
 
 The CHKSUM program calculates the used space on the data pack and calculates a check sum that includes a standard <a href="https://www.jaapsch.net/psion/fileform.htm#opkfile">.OPK</a> file header. 
-This is to allow immediate comparison with data packs uploaded using tools such as <a href="https://www.jaapsch.net/psion/connect.htm#software">CL.EXE</a> or <a href="https://www.lostgallifreyan.net/Software/ORG-Link/ORG-Link.htm">ORG-LINK</a>.
+This is to allow immediate comparison with data packs uploaded / downloaded using tools such as <a href="https://www.jaapsch.net/psion/connect.htm#software">CL.EXE</a> or <a href="https://www.lostgallifreyan.net/Software/ORG-Link/ORG-Link.htm">ORG-LINK</a>.
 It also limits the calculation to the used area of the pack, including items marked deleted, which limits the calculation duration.
 
 <br>  
