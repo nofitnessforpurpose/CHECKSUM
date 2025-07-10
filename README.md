@@ -22,7 +22,7 @@ Check sum values are frequently used where its helpful to independently determin
 Changes may arise for example due to corruption, physical read / write errors or overwriting of data.
 The CHKSUM program contained in the repository is configured to calculate a check sum for data packs B, C or D of a Psion Organiser 2 device, as selected by the user.  
 
-The CHKSUM program calculates the used space on the data pack and calculates a check sum that includes a standard .OPK file header. 
+The CHKSUM program calculates the used space on the data pack and calculates a check sum that includes a standard <a href="https://www.jaapsch.net/psion/fileform.htm#opkfile">.OPK</a> file header. 
 This is to allow immediate comparison with data packs uploaded using tools such as <a href="https://www.jaapsch.net/psion/connect.htm#software">CL.EXE</a> or <a href="https://www.lostgallifreyan.net/Software/ORG-Link/ORG-Link.htm">ORG-LINK</a>.
 It also limits the calculation to the used area of the pack, including items marked deleted, which limits the calculation duration.
 
@@ -44,7 +44,7 @@ Many programs are capable of calculating check sums, the author uses a number th
 ## Installation
 A PSION Organiser 2 .OPK file is avialble which contains both source and object code. This file can be downloaded onto a data pack using tools such as <a href="https://www.lostgallifreyan.net/Software/ORG-Link/ORG-Link.htm">ORG-LINK</a> or similar.
 
-When downloaded, run the CHKSUM progam from the data pack. The program will allow selection of the Drive the data pack is located in e.g. B: 
+When down loaded and programmed onto a data pack, run the CHKSUM progam from the data pack. The program will allow selection of the Drive the data pack is located in e.g. B: 
 The tool should then determine the size of the used data space on the data pack and calculate the check sum for the data pack. 
 The cacluated value should match the value shown for the current release of the software.
 When the values match there is a limited liklihood of issue with the data pack, source data or data transfer process.
