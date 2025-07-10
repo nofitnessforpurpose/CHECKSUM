@@ -33,7 +33,7 @@ The available algorithm in revision 0.1 is a sum of bytes approach. This has lim
 Following the initial release, more sophisticated algorithms will be added, most probably in machine code.  
 
 Checksums are represented in Hexadecimal values.
-The checksum for the demonstration pack .OPK included in the distribution is:  
+The sum of bytes checksum for the demonstration pack .OPK included in the distribution is:  
 <bold>003A4EE</bold>
 
 At the time of publishing it is believed this is the first such use of a check sum for the purposes of verifying downloaded pack integrity on the Psion Organiser 2 device.  
