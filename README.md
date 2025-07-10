@@ -36,8 +36,9 @@ Checksums are represented in Hexadecimal values.
 The checksum for the demonstration pack .OPK included in the distribution is:  
 <bold>003A4EE</bold>
 
-At the time of publishing it is believed this is the first such use of a check sum for the purposes of verifying downloaded pack integrity on the Psion Organiser 2 device.
+At the time of publishing it is believed this is the first such use of a check sum for the purposes of verifying downloaded pack integrity on the Psion Organiser 2 device.  
 
+Many programs are capable of calculating check sums, the author uses a number though finds <a href="https://mh-nexus.de/en/hxd/">this<a> tool convenient.
 <br>  
 
 ## Installation
