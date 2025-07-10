@@ -38,16 +38,17 @@ The checksum for the demonstration pack .OPK included in the distribution is:
 
 At the time of publishing it is believed this is the first such use of a check sum for the purposes of verifying downloaded pack integrity on the Psion Organiser 2 device.  
 
-Many programs are capable of calculating check sums, the author uses a number though finds <a href="https://mh-nexus.de/en/hxd/">this<a> tool convenient.
+Many programs are capable of calculating check sums, the author uses a number though finds <a href="https://mh-nexus.de/en/hxd/">this<a> tool convenient.  
+
 <br>  
 
 ## Installation
-A PSION Organiser 2 .OPK file is avialble which contains both source and object code. This file can be downloaded onto a data pack using tools such as <a href="https://www.lostgallifreyan.net/Software/ORG-Link/ORG-Link.htm">ORG-LINK</a> or similar.
+A PSION Organiser 2 .OPK file is <a href="https://github.com/nofitnessforpurpose/CHECKSUM/blob/main/code/CHKSUM.opk">avialable</a> which contains both source and object code. This file can be downloaded onto a data pack using tools such as <a href="https://www.lostgallifreyan.net/Software/ORG-Link/ORG-Link.htm">ORG-LINK</a> or similar.
 
 When down loaded and programmed onto a data pack, run the CHKSUM progam from the data pack. The program will allow selection of the Drive the data pack is located in e.g. B: 
 The tool should then determine the size of the used data space on the data pack and calculate the check sum for the data pack. 
 The cacluated value should match the value shown for the current release of the software.
-When the values match there is a limited liklihood of issue with the data pack, source data or data transfer process.
+When the values match there is a limited liklihood of issue with the data pack, source data or data transfer process.  
 
 <br>  
 
@@ -55,7 +56,7 @@ When the values match there is a limited liklihood of issue with the data pack, 
 In the case of data storage reliability such as on a RAM PACK or long term storage on an EPROM or other memory device. 
 The tool allows validation of the data storage content, without needing to interpret data (files, programs or other information) on the storage device.
 An example use case has been validating a new U.V. erase system. To ensure that data once written, remains constant for all the used space of the data pack. 
-Note used space includes all data including deleted files or data. 
+Note used space includes all data including deleted files or data.  
 
 <br>  
 
@@ -75,8 +76,8 @@ The programs in the distribution are as detailed in the table below:
 <br>  
 
 ## Attribution
-The original code is drawn from a program by Jaap Scherphuis, psion@jaapsch.net SENDPACK. 
-The code was modified and adapted to generate values as would be obtained using <a href="https://www.lostgallifreyan.net/Software/ORG-Link/ORG-Link.htm">ORG-LINK</a>.
+The original code is drawn from the <a href="https://www.jaapsch.net/psion/software/opl/sendpack.zip">SENDPACK</a> program by Jaap Scherphuis, psion@jaapsch.net SENDPACK. 
+The code was modified and adapted to generate values as would be obtained using <a href="https://www.lostgallifreyan.net/Software/ORG-Link/ORG-Link.htm">ORG-LINK</a> pack upload feature generating a .OPK file.
 
 Note  
 Some versions of .OPK program packs have been found to use different length byte referencing which can lead to checksums which are not of all the data in the .OPK file. 
