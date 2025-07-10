@@ -68,6 +68,9 @@ The programs in the distribution are as detailed in the table below:
 | CSC.OPL      | Calculate checksum                          |
 | HX$.OPL      | Converts a number to hexadecimal string     |
 | CONV$.OPL    | Convert a Hexadecimal string to byte values |
+|              |                                             |
+| CHKSUM.OPK   | .OPK Pack image with sources & Rev 3.3 LA Object code |
+
 
 <br>  
 
