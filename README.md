@@ -45,9 +45,9 @@ Many programs are capable of calculating check sums, the author uses a number th
 ## Installation
 A PSION Organiser 2 .OPK file is <a href="https://github.com/nofitnessforpurpose/CHECKSUM/blob/main/code/CHKSUM.opk">available</a> which contains both source and object code. This file can be downloaded onto a data pack using tools such as <a href="https://www.lostgallifreyan.net/Software/ORG-Link/ORG-Link.htm">ORG-LINK</a> or similar.
 
-When down loaded and programmed onto a data pack, run the CHKSUM progam from the data pack. The program will allow selection of the Drive the data pack is located in e.g. B: 
-The tool should then determine the size of the used data space on the data pack and calculate the check sum for the data pack. 
-The cacluated value should match the value shown for the current release of the software.
+When down loaded and programmed onto a data pack, run the CHKSUM progam from the data pack. The program will allow selection of the Drive of the target data pack e.g. B: 
+The tool should then determine the size of the used data space on the data pack and calculate the check sum for the target data pack. 
+When the data pack containing the utility is selected, the cacluated value should match the value shown for the current release of the software.
 When the values match there is a limited liklihood of issue with the data pack, source data or data transfer process.  
 
 <br>  
@@ -80,12 +80,22 @@ The original code is drawn from the <a href="https://www.jaapsch.net/psion/softw
 The code was modified and adapted to generate values as would be obtained using <a href="https://www.lostgallifreyan.net/Software/ORG-Link/ORG-Link.htm">ORG-LINK</a> pack upload feature generating a .OPK file.
 
 Note  
-Some versions of .OPK program packs have been found to use different length byte referencing which can lead to checksums which are not of all the data in the .OPK file. 
+Some versions of .OPK program packs have been found to use different length byte referencing which can lead to checksums which do not include all the data in the .OPK file. 
 The issue is associated with inclusion or not of the terminating 0xFFFF bytes of the .OPK file record structure.
 Part of the modification ensures that the terminating 0xFFFF is included in the size of the data as expressed in the 4th, 5th & 6th bytes of the .OPK file structure. 
 This approach has the benefit of third party check sum calculations matching those obtained using the tool.  
 
-Some, typically older .OPK program packs may differ by a value of 2 which is accounted for data block length value applied in the 6th length byte location of the .OPK file.
+Some, typically older .OPK program packs may indicate a differing check sum value i.e. 2 for the sum of bytes technique, which is accounted for data block length value applied in the 6th length byte location of the .OPK file.
+
+e.g.
+As shown for a blank 32k byte data pack in the image below at byte location 5 the value 0x17 (23d) includes the last two bytes. In some .OPK pack image files it has been observed that byte 5 was set so as not to include the terminating 0xFFFF byte sequence in the block length.
+
+<div align="center">
+  <div style="display: flex; align-items: flex-start;">
+  <img src="https://github.com/nofitnessforpurpose/CHECKSUM/blob/main/images/2025-07-14%20-%2032K-EMPTY-PACK.jpg?raw=true" width="400px" alt="NotFitForPurpose Image copyright (c) 01 July 2025 nofitnessforpurpose All Rights Reserved">
+  </div>
+</div>
+<BR>
 
 <BR>
 
