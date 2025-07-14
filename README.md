@@ -88,7 +88,7 @@ This approach has the benefit of third party check sum calculations matching tho
 Some, typically older .OPK program packs may indicate a differing check sum value i.e. 2 for the sum of bytes technique, which is accounted for data block length value applied in the 6th length byte location of the .OPK file.
 
 e.g.
-As shown for a blank 32k byte data pack in the image below at byte location 5 the value 0x17 (23d) includes the last two bytes. In some .OPK pack image files it has been observed that byte 5 was set so as not to include the terminating 0xFFFF byte sequence in the block length.
+As shown for a blank 32k byte data pack in the image below, at byte location 5 the value 0x17 (23d) includes the last two bytes. In some .OPK pack image files it has been observed that byte 5 was set so as not to include the terminating 0xFFFF byte sequence in the block length.
 
 <div align="center">
   <div style="display: flex; align-items: flex-start;">
