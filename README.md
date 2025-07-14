@@ -75,10 +75,6 @@ The programs in the distribution are as detailed in the table below:
 
 <br>  
 
-## Attribution
-The original code is drawn from the <a href="https://www.jaapsch.net/psion/software/opl/sendpack.zip">SENDPACK</a> program by Jaap Scherphuis, psion@jaapsch.net. 
-The code was modified and adapted to generate values as would be obtained using <a href="https://www.lostgallifreyan.net/Software/ORG-Link/ORG-Link.htm">ORG-LINK</a> pack upload feature generating a .OPK file.
-
 Note  
 Some versions of .OPK program packs have been found to use different length byte referencing which can lead to checksums which do not include all the data in the .OPK file. 
 The issue is associated with inclusion or not of the terminating 0xFFFF bytes of the .OPK file record structure.
@@ -96,6 +92,10 @@ As shown for a blank 32k byte data pack in the image below, at byte location 5 t
   </div>
 </div>
 <BR>
+
+## Attribution
+The original code is drawn from the <a href="https://www.jaapsch.net/psion/software/opl/sendpack.zip">SENDPACK</a> program by Jaap Scherphuis, psion@jaapsch.net. 
+The code was modified and adapted to generate values as would be obtained using <a href="https://www.lostgallifreyan.net/Software/ORG-Link/ORG-Link.htm">ORG-LINK</a> pack upload feature generating a .OPK file.  
 
 <BR>
 
