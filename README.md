@@ -43,7 +43,7 @@ Many programs are capable of calculating check sums, the author uses a number th
 <br>  
 
 ## Installation
-A PSION Organiser 2 .OPK file is <a href="https://github.com/nofitnessforpurpose/CHECKSUM/blob/main/code/CHKSUM.opk">available</a> which contains both source and object code. This file can be downloaded onto a data pack using tools such as <a href="https://www.lostgallifreyan.net/Software/ORG-Link/ORG-Link.htm">ORG-LINK</a> or similar.
+A PSION Organiser 2 .OPK file is <a href="https://github.com/nofitnessforpurpose/CHECKSUM/blob/main/code/CHKSUM.opk">available</a> which contains both source and object code. This file can be downloaded onto a data pack using a COMMS link and tools such as <a href="https://www.lostgallifreyan.net/Software/ORG-Link/ORG-Link.htm">ORG-LINK</a> or <a href="https://www.jaapsch.net/psion/connect.htm">similar</a>.
 
 When down loaded and programmed onto a data pack, run the CHKSUM progam from the data pack. The program will allow selection of the Drive of the target data pack e.g. B: 
 The tool should then determine the size of the used data space on the data pack and calculate the check sum for the target data pack. 
