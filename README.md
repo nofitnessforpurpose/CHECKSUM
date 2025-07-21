@@ -107,7 +107,7 @@ As shown for a blank 32k byte data pack in the image below, at byte location 5 t
 </div>
 <BR>
 
-A Normal checksum calculation commences at pack address 0x000A, in the .OPK file shown in the image above the equivalent location is 0x0010.  
+A <strong>Normal</strong> checksum calculation commences at absolute pack address 0x000A, in the .OPK file shown in the image above the equivalent location is 0x0010 due to the addition of the 6 byte .OPK header.  
 
 <BR>
 
