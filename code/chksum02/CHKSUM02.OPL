@@ -1,0 +1,156 @@
+chksum02:
+REM Prog : Pack Checksum
+REM Rev  : 0.2
+REM Auth : NFfP
+REM Date : 2025/07/16
+REM Attr : Portions J.Scherphuis
+
+LOCAL A$(255)
+LOCAL MC1$(72),MC2$(140),MC3$(255),A%(3)
+LOCAL N%,M%,P%,L1%,L2%,C%,A
+LOCAL CS
+LOCAL T%
+LOCAL X%
+
+CLS
+PRINT "CkSm 0.2 Loading";
+PRINT "m. code";
+
+MC1$ = CONV$:("18EC00FF22804F3F62253A5FCE000A3F6025323F5F188C0280270C082711185D27F15A164F20023F5F3F63251820E43F5C1883000018C2003CFE22806F02E7033233ED045F4F1839")
+MC2$ = CONV$:("18EC04FD2284EC02FD2282EC00FD2280FF227EF622824F3F622527FE2284F622833F60251DFE2280E60008374F3F5E251033FE227E4FE304ED0424026C035F2001324F1839")
+MC3$ = CONV$:("18A600364F5FFD228008FC2280EB0024014CFD2280324A27033620EDFC22801839") : REM Sum of bytes in string routine
+N% = ADDR(MC2$) + 1
+M% = ADDR(A%())
+
+DO
+  DO
+    CLS
+    REM    1234567890123456
+    PRINT "CkSm - Pack?"
+    PRINT "(B, C, D) H=Help";
+    P% = ASC(UPPER$(GET$))
+    IF (P% = %H)
+      P% = VIEW(2,"Select pack (B, C or D) checksum will be calculated for.")
+    ENDIF
+    IF (P% = 1) OR (P% = %Q)
+      RETURN
+    ENDIF
+  UNTIL (P% >= %B) AND (P% <= %D)
+  
+  DO
+    CLS
+    REM    1234567890123456
+    PRINT "CkSm - Norm/All?";
+    PRINT "(N, A) H=Help";
+    T% = ASC(UPPER$(GET$))
+    IF (T% = %H)
+      T% = VIEW(2,"Select checksum range. Select N=Normal for standard used pack space. Select A=All to include all pack headers (i.e. .OPK).")
+    ENDIF
+    If (T% = %Q)
+      RETURN
+    ENDIF
+  UNTIL (T% = %N) OR (T% = %A)
+  
+  CLS
+  PRINT "CkSm - Pk Sz"
+  P% = P% - %A
+  A%(1) = P%
+  C% = USR(ADDR(MC1$) + 1, M%)
+UNTIL (C% <> 246)
+
+IF C%
+  RAISE C%
+ENDIF
+
+ONERR E::
+
+A$ = "OPK" + CHR$(A%(2)) + CHR$(PEEKB(ADDR(A%()) + 4)) + CHR$(A%(3) AND 255)
+C% = USR(ADDR(MC3$) + 1, ADDR(A$))
+IF (T% = %A)
+  CS = CS + (PEEKB($2280) * 256.) + PEEKB($2281)
+ELSE
+  CS = 0
+ENDIF
+
+A$ = REPT$(CHR$(0), 255)
+A = 65536. * A%(2) + A%(3)
+IF (A%(3) < 0)
+  A = A + 65536
+ENDIF
+PRINT "Data :";
+IF (A < 8192)
+  PRINT A;" byt"
+ELSE
+  PRINT FIX$(A / 1024, 0, 6);" k"
+ENDIF
+PAUSE -30
+
+L1% = INT(A / 255)
+L2% = A - 255. * L1%
+
+A%(1) = ADDR(A$)
+A%(2) = P% * 256 + 0
+A%(3) = 0
+
+AT 1,2 :PRINT "Blks     of     ";
+AT 13,2 :PRINT GEN$(INT(A / 256), 3);
+
+WHILE L1%
+  C% = USR(N%, M%)
+  
+  IF (C% = 0)
+    IF (T% = %N)
+      A$ = REPT$(CHR$(0), 10) + MID$(A$, 11, 245)
+      T% = %n
+    ENDIF
+    C% = USR(ADDR(MC3$) + 1, ADDR(A$))
+    CS = CS + (PEEKB($2280) * 256.) + PEEKB($2281)
+  ELSE
+    RAISE C%
+  ENDIF
+  AT 6,2
+  PRINT GEN$(L1%, 3);" ";
+  L1% = L1% - 1
+ENDWH
+
+A$ = REPT$(CHR$(0), L2%)
+C% = USR(N%, M%)
+IF C%=0
+  C% = USR(ADDR(MC3$) + 1, ADDR(A$))
+  CS = CS + (PEEKB($2280) * 256.) + PEEKB($2281)
+ELSEIF C%
+  RAISE C%
+ENDIF
+
+CLS
+PRINT "CkSm - Pack ";CHR$(P% + 65);": "
+IF T% = %A
+  PRINT "All  ";
+ELSE
+  PRINT "Norm ";
+ENDIF
+PRINT hx$:(CS, 8);
+X%=ASC(UPPER$(CHR$(GET)))
+IF (X% = %Q) :RETURN :ENDIF
+
+DO
+  X% = VIEW(2, hx$:(CS, 8)+" C=Compare with M9 - S=Store in M9 - Q=Quit - ")
+  X% = ASC(UPPER$(CHR$(X%)))
+  IF (X% = %S)
+    m9 = CS
+    X% = VIEW(2, "Checksum stored in m9 "+hx$:(M9, 8)+" - EXE to continue. - ") 
+  ENDIF
+  IF (X% = %C)
+    IF (CS = m9)
+      X% = VIEW(2, "Cheksums equal "+hx$:(M9, 8)+" - EXE to continue. - ")
+    ELSE
+      X% = VIEW(2,"Checksums differ New="+hx$:(CS, 8) + " Old=" + hx$:(M9, 8)+" - EXE to continue. - ")
+    ENDIF
+  ENDIF
+UNTIL (X% = %Q)
+RETURN
+
+E::
+ONERR OFF
+C% = ERR
+RAISE C%
