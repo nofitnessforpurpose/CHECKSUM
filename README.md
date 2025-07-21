@@ -22,9 +22,10 @@ Check sum values are frequently used where its helpful to independently determin
 Changes may arise for example due to corruption, physical read / write errors or overwriting of data.
 The CHKSUM program contained in the repository is configured to calculate a check sum for data packs B, C or D of a Psion Organiser 2 device, as selected by the user.  
 
-The CHKSUM program calculates the used space on the data pack and calculates a check sum that includes a standard <a href="https://www.jaapsch.net/psion/fileform.htm#opkfile">.OPK</a> file header. 
-This is to allow immediate comparison with data packs uploaded / downloaded using tools such as <a href="https://www.jaapsch.net/psion/connect.htm#software">CL.EXE</a> or <a href="https://www.lostgallifreyan.net/Software/ORG-Link/ORG-Link.htm">ORG-LINK</a>.
-It also limits the calculation to the used area of the pack, including items marked deleted, which limits the calculation duration.
+The CHKSUM program calculates the used space on the data pack and calculates a check sum for the selected pack content. The <strong>Normal</strong> option excludes the data pack header as this is variable for user created packs. The <strong>All</strong> option includes a .OPK and the data pack header to allow comparison with a standard <a href="https://www.jaapsch.net/psion/fileform.htm#opkfile">.OPK</a> file header. 
+
+The <strong>All</strong> option therefore allows immediate comparison with data packs uploaded / downloaded using tools such as <a href="https://www.jaapsch.net/psion/connect.htm#software">CL.EXE</a> or <a href="https://www.lostgallifreyan.net/Software/ORG-Link/ORG-Link.htm">ORG-LINK</a> (see note below on pack delimiters).
+Calculation comprises the used areas of the pack, including items marked deleted, which limits the calculation duration whilst retaining compatability with .OPK file checksums.
 
 <br>  
 
@@ -36,14 +37,14 @@ Checksums are represented in Hexadecimal values.
 Two Checksum values can be calculated:  
 |  Type    | Description                                                    |
 | -------- | ---------------------------------------------------------------|
-|  <bold>Normal</bold>  | The principal pack content which excludes the header which can vary by creation date and pack type |
-|   <bold>All</bold>    | All the pack data which includs the header |  
+|  <strong>Normal</strong>  | The principal pack content which excludes the header which can vary by creation date and pack type |
+|  <strong>All</strong>     | All the pack data which includs the header |  
 
 The sum of bytes checksums for revision 2 .OPK included in the distribution are:  
 | Type     | Value                                                          |
 | -------- | ---------------------------------------------------------------|
 | Normal   | 000616E5 |
-| All      | 000616E5
+| All      | 00061B30 |
 
 
 At the time of publishing it is believed this is the first such use of a check sum for the purposes of verifying downloaded pack integrity on the Psion Organiser 2 device.  
