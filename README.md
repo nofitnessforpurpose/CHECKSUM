@@ -29,23 +29,37 @@ It also limits the calculation to the used area of the pack, including items mar
 <br>  
 
 ## Check Sum
-The available algorithm in revision 0.1 is a sum of bytes approach. This has limitations, such as lack of sensitivity to complementary errors. 
-Following the initial release, more sophisticated algorithms will be added, most probably in machine code.  
+The available algorithm in revision 0.2 is a sum of bytes approach. This has limitations, such as lack of sensitivity to complementary errors. 
+Revision 0.2 implements a machine code algorithim for sum of bytes. More sophisticated algorithms will be added.  
 
 Checksums are represented in Hexadecimal values.
-The sum of bytes checksum for the demonstration pack .OPK included in the distribution is:  
-<bold>003A4EE</bold>
+Two Checksum values can be calculated:  
+|  Type    | Description                                                    |
+| -------- | ---------------------------------------------------------------|
+|  <bold>Normal</bold>  | The principal pack content which excludes the header which can vary by creation date and pack type |
+|   <bold>All</bold>    | All the pack data which includs the header |  
+
+The sum of bytes checksums for revision 2 .OPK included in the distribution are:  
+| Type     | Value                                                          |
+| -------- | ---------------------------------------------------------------|
+| Normal   | 000616E5 |
+| All      | 000616E5
+
 
 At the time of publishing it is believed this is the first such use of a check sum for the purposes of verifying downloaded pack integrity on the Psion Organiser 2 device.  
 
 Many programs are capable of calculating check sums, the author uses a number though finds <a href="https://mh-nexus.de/en/hxd/">this<a> tool convenient when verifying .OPK files on Microsoft Windows Computers.  
 
+Version 0.3 will include verification of the pack header checksum for all packs.
+
 <br>  
 
 ## Installation
-A PSION Organiser 2 .OPK file is <a href="https://github.com/nofitnessforpurpose/CHECKSUM/blob/main/code/CHKSUM.opk">available</a> which contains both source and object code. This file can be downloaded onto a data pack using a COMMS link and tools such as <a href="https://www.lostgallifreyan.net/Software/ORG-Link/ORG-Link.htm">ORG-LINK</a> or <a href="https://www.jaapsch.net/psion/connect.htm">similar</a>.
+<img src="https://github.com/nofitnessforpurpose/CHECKSUM/blob/main/images/OPK.jpg">  
 
-When down loaded and programmed onto a data pack, run the CHKSUM progam from the data pack. The program will allow selection of the Drive of the target data pack e.g. B: 
+A PSION Organiser 2 .OPK file is <a href="https://github.com/nofitnessforpurpose/CHECKSUM/blob/main/code/chksum02/CHKSUM02.OPL">available</a> which contains both source and object code. This file can be downloaded onto a data pack using a COMMS link and tools such as <a href="https://www.lostgallifreyan.net/Software/ORG-Link/ORG-Link.htm">ORG-LINK</a> or <a href="https://www.jaapsch.net/psion/connect.htm">similar</a>.
+
+When down loaded and programmed onto a data pack, run the CHKSUMxx progam from the data pack. The program will allow selection of the Drive of the target data pack e.g. B: 
 The tool should then determine the size of the used data space on the data pack and calculate the check sum for the target data pack. 
 When the data pack containing the utility is selected, the cacluated value should match the value shown for the current release of the software.
 When the values match there is a limited liklihood of issue with the data pack, source data or data transfer process.  
@@ -65,12 +79,11 @@ The programs in the distribution are as detailed in the table below:
 
 | Name         | Description                                 |
 | ------------ |---------------------------------------------| 
-| CHKSUM.OPL   | Main program                                |
-| CSC.OPL      | Calculate checksum                          |
+| CHKSUMxx.OPL | Main program                                |
 | HX$.OPL      | Converts a number to hexadecimal string     |
 | CONV$.OPL    | Convert a Hexadecimal string to byte values |
 |              |                                             |
-| CHKSUM.OPK   | .OPK Pack image with sources & Rev 3.3 LA Object code |
+| CHKSUMxx.OPK | .OPK Pack image with sources & Rev 3.3 LA Object code |
 
 
 <br>  
@@ -91,6 +104,10 @@ As shown for a blank 32k byte data pack in the image below, at byte location 5 t
   <img src="https://github.com/nofitnessforpurpose/CHECKSUM/blob/main/images/2025-07-14%20-%2032K-EMPTY-PACK.jpg?raw=true" width="400px" alt="NotFitForPurpose Image copyright (c) 01 July 2025 nofitnessforpurpose All Rights Reserved">
   </div>
 </div>
+<BR>
+
+A Normal checksum calculation commences at pack address 0x000A, in the .OPK file shown in the image above the equivalent location is 0x0010.  
+
 <BR>
 
 ## Attribution
