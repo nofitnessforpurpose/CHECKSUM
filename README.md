@@ -1,7 +1,7 @@
 # CHKSUM
 Calculate the check sum of used space on a data pack that matches ORG-LINK pack .OPK images.
 
-This <a href="https://en.wikipedia.org/wiki/Psion_Organiser"> Organiser II</a> <a href="https://en.wikipedia.org/wiki/Open_Programming_Language">OPL progam</a> reads the used space of a datapack and calculates a simple check sum for the pack. This checksum value will match a <a href="https://en.wikipedia.org/wiki/Checksum">Checksum 32</a> value.  
+This <a href="https://en.wikipedia.org/wiki/Psion_Organiser"> Organiser II</a> <a href="https://en.wikipedia.org/wiki/Open_Programming_Language">OPL progam</a> reads the used space of a data pack and calculates a check sum for the pack. This checksum value will match a <a href="https://en.wikipedia.org/wiki/Checksum">Checksum 32</a> value.  
 
 <div align="center">
   <div style="display: flex; align-items: flex-start;">
@@ -20,7 +20,7 @@ This <a href="https://en.wikipedia.org/wiki/Psion_Organiser"> Organiser II</a> <
 ## Use Case
 Check sum values are frequently used where it's helpful to independently determine if data has changed either due to degradation, purposeful or accidental modification.  
 
-Changes may arise for example due to corruption (e.g. for EPROMS inadequate label, erase time or positioning in the 'formatter'), physical read / write errors or overwriting of data.  
+Changes may arise for example due to corruption (e.g. for EPROMS inadequate label, erase time or positioning in the 'formatter'), physical read / write errors, over writing or addition of data.  
 
 The CHKSUM program contained in the repository is configured to calculate a check sum for data packs B, C or D as selected by the user on a Psion Organiser 2 device.  
 
