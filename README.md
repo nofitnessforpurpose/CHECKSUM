@@ -18,9 +18,10 @@ This <a href="https://en.wikipedia.org/wiki/Psion_Organiser"> Organiser II</a> <
 <br>  
 
 ## Use Case
-Check sum values are frequently used where its helpful to independently determine if data has changed either due to degradation, purposeful or accidental modification.  
-Changes may arise for example due to corruption, physical read / write errors or overwriting of data.
-The CHKSUM program contained in the repository is configured to calculate a check sum for data packs B, C or D of a Psion Organiser 2 device, as selected by the user.  
+Check sum values are frequently used where it's helpful to independently determine if data has changed either due to degradation, purposeful or accidental modification.  
+Changes may arise for example due to corruption (e.g. for EPROMS inadequate label, erase time or positioning in the 'formatter'), physical read / write errors or overwriting of data.  
+
+The CHKSUM program contained in the repository is configured to calculate a check sum for data packs B, C or D as selected by the user on a Psion Organiser 2 device.  
 
 The CHKSUM program calculates the used space on the data pack and calculates a check sum for the selected pack content. The <strong>Normal</strong> option excludes the data pack header as this is variable for user created packs. The <strong>All</strong> option includes a .OPK and the data pack header to allow comparison with a standard <a href="https://www.jaapsch.net/psion/fileform.htm#opkfile">.OPK</a> file header. 
 
