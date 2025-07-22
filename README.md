@@ -77,6 +77,11 @@ When the values match there is a limited liklihood of issue with the data pack, 
 
 <br>  
 
+## Compatibility
+The release .OPK has been tested against models CM, XP, LA, LZ & LZ64 on pack sizes up to 64 k bytes in size and is compatible with linear and page addressed EPROM data packs and 32 k RAM packs.  
+
+<br>  
+
 ## Additional Uses
 In the case of data storage reliability such as on a RAM PACK or long term storage on an EPROM or other memory device. 
 The tool allows validation of the data storage content, without needing to interpret data (files, programs or other information) on the storage device.
