@@ -29,6 +29,8 @@ The CHKSUM program calculates the used space on the data pack and calculates a c
 The <strong>All</strong> option therefore allows immediate comparison with data packs uploaded / downloaded using tools such as <a href="https://www.jaapsch.net/psion/connect.htm#software">CL.EXE</a> or <a href="https://www.lostgallifreyan.net/Software/ORG-Link/ORG-Link.htm">ORG-LINK</a> (see note below on pack delimiters).
 Calculation comprises the used areas of the pack, including items marked deleted, which limits the calculation duration whilst retaining compatability with .OPK file checksums.
 
+The most recent check sum reference values can be found <a href="https://github.com/nofitnessforpurpose/CHECKSUM/blob/main/data/checksums.csv">here</a>.
+
 <div align="center">
   <div style="display: flex; align-items: flex-start;">
     <img src="https://github.com/nofitnessforpurpose/CHECKSUM/blob/main/images/2025-07-22%2012-37-59.gif?raw=true" width="200px" alt="NotFitForPurpose Image copyright (c) 22 July 2025 nofitnessforpurpose All Rights Reserved">
