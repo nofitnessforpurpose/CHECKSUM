@@ -5,7 +5,7 @@ This <a href="https://en.wikipedia.org/wiki/Psion_Organiser"> Organiser II</a> <
 
 <div align="center">
   <div style="display: flex; align-items: flex-start;">
-  <img src="https://github.com/nofitnessforpurpose/CHECKSUM/blob/main/images/CHECKSUM-01.jpg?raw=true" width="400px" alt="NotFitForPurpose Image copyright (c) 01 July 2025 nofitnessforpurpose All Rights Reserved">
+    <img src="https://github.com/nofitnessforpurpose/CHECKSUM/blob/main/images/CHECKSUM-01.jpg?raw=true" width="400px" alt="NotFitForPurpose Image copyright (c) 01 July 2025 nofitnessforpurpose All Rights Reserved">
   </div>
 </div>
 <BR>
@@ -27,7 +27,15 @@ The CHKSUM program calculates the used space on the data pack and calculates a c
 The <strong>All</strong> option therefore allows immediate comparison with data packs uploaded / downloaded using tools such as <a href="https://www.jaapsch.net/psion/connect.htm#software">CL.EXE</a> or <a href="https://www.lostgallifreyan.net/Software/ORG-Link/ORG-Link.htm">ORG-LINK</a> (see note below on pack delimiters).
 Calculation comprises the used areas of the pack, including items marked deleted, which limits the calculation duration whilst retaining compatability with .OPK file checksums.
 
-<br>  
+<div align="center">
+  <div style="display: flex; align-items: flex-start;">
+    <img src="https://github.com/nofitnessforpurpose/CHECKSUM/blob/main/images/2025-07-22%2012-37-59.gif?raw=true" width="200px" alt="NotFitForPurpose Image copyright (c) 22 July 2025 nofitnessforpurpose All Rights Reserved">
+  </div>
+</div>
+
+The demonstration above shows verification of CHCKSUM02 against its self on Pack B: and verification of its own checksum against the Personal Finance Pack in Pack C:, together with a test against the held check sum of CHCKSUM02 against the Personal Finance packs check sum. The Personal Finance Pack in Pack C: is ~32k bytes, the checksum calculation takes ~8 seconds.
+
+<BR>
 
 ## Check Sum
 The available algorithm in revision 0.2 is a sum of bytes approach. This has limitations, such as lack of sensitivity to complementary errors. 
