@@ -23,7 +23,7 @@ Changes may arise for example due to corruption (e.g. for EPROMS inadequate labe
 
 The CHKSUM program contained in the repository is configured to calculate a check sum for data packs B, C or D as selected by the user on a Psion Organiser 2 device.  
 
-The CHKSUM program calculates the used space on the data pack and calculates a check sum for the selected pack content. The <strong>Normal</strong> option excludes the data pack header as this is variable for user created packs. The <strong>All</strong> option includes a .OPK and the data pack header to allow comparison with a standard <a href="https://www.jaapsch.net/psion/fileform.htm#opkfile">.OPK</a> file header. 
+The CHKSUM program calculates the used space on the data pack and calculates a check sum for the selected pack content. The <strong>Normal</strong> option excludes the data pack header as this is variable for user created packs. The <strong>All</strong> option includes a .OPK and the data pack header to allow comparison with a standard <a href="https://www.jaapsch.net/psion/fileform.htm#opkfile">.OPK</a> file header.  
 
 The <strong>All</strong> option therefore allows immediate comparison with data packs uploaded / downloaded using tools such as <a href="https://www.jaapsch.net/psion/connect.htm#software">CL.EXE</a> or <a href="https://www.lostgallifreyan.net/Software/ORG-Link/ORG-Link.htm">ORG-LINK</a> (see note below on pack delimiters).
 Calculation comprises the used areas of the pack, including items marked deleted, which limits the calculation duration whilst retaining compatability with .OPK file checksums.
