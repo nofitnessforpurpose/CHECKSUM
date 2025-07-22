@@ -120,7 +120,7 @@ A <strong>Normal</strong> checksum calculation commences at absolute pack addres
 <BR>
 
 ## Attribution
-The original code is drawn from the <a href="https://www.jaapsch.net/psion/software/opl/sendpack.zip">SENDPACK</a> program by Jaap Scherphuis, psion@jaapsch.net. 
+The original pack read code is drawn from the <a href="https://www.jaapsch.net/psion/software/opl/sendpack.zip">SENDPACK</a> program by Jaap Scherphuis, psion@jaapsch.net. 
 The code was modified and adapted to generate values as would be obtained using <a href="https://www.lostgallifreyan.net/Software/ORG-Link/ORG-Link.htm">ORG-LINK</a> pack upload feature generating a .OPK file.  
 
 <BR>
