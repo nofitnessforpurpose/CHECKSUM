@@ -19,6 +19,7 @@ This <a href="https://en.wikipedia.org/wiki/Psion_Organiser"> Organiser II</a> <
 
 ## Use Case
 Check sum values are frequently used where it's helpful to independently determine if data has changed either due to degradation, purposeful or accidental modification.  
+
 Changes may arise for example due to corruption (e.g. for EPROMS inadequate label, erase time or positioning in the 'formatter'), physical read / write errors or overwriting of data.  
 
 The CHKSUM program contained in the repository is configured to calculate a check sum for data packs B, C or D as selected by the user on a Psion Organiser 2 device.  
