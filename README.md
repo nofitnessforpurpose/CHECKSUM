@@ -113,7 +113,7 @@ The issue is associated with inclusion or not of the terminating 0xFFFF bytes of
 Part of the modification ensures that the terminating 0xFFFF is included in the size of the data as expressed in the 4th, 5th & 6th bytes of the .OPK file structure. 
 This approach has the benefit of third party check sum calculations matching those obtained using the tool.  
 
-Some, typically older .OPK program packs may indicate a differing check sum value i.e. 2 for the sum of bytes technique, which is accounted for data block length value applied in the 6th length byte location of the .OPK file.
+Some, typically older .OPK program packs may indicate a differing sum of bytes check sum value i.e. 2 for the sum of bytes technique, which is accounted for data block length value applied in the 6th length byte location of the .OPK file.
 
 e.g.
 As shown for a blank 32k byte data pack in the image below, at byte location 5 the value 0x17 (23d) includes the last two bytes. In some .OPK pack image files it has been observed that byte 5 was set so as not to include the terminating 0xFFFF byte sequence in the block length.
