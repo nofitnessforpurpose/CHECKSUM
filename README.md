@@ -58,6 +58,7 @@ The sum of bytes checksums for revision 2 .OPK included in the distribution are:
 | Normal   | 000616E5 |
 | All      | 00061B30 |
 
+For completeness the MD5 hash for the .OPK files is 51b735d5499e85ed54e5a60af6298633
 
 At the time of publishing it is believed this is the first such use of a check sum for the purposes of verifying downloaded pack integrity on the Psion Organiser 2 device.  
 
