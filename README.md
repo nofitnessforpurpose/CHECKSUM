@@ -1,7 +1,7 @@
 # CHKSUM
 Calculate the check sum of used space on a data pack that matches ORG-LINK pack .OPK images.
 
-This <a href="https://en.wikipedia.org/wiki/Psion_Organiser"> Organiser II</a> <a href="https://en.wikipedia.org/wiki/Open_Programming_Language">OPL progam</a> reads the used space of a data pack and calculates a check sum for the pack. This checksum value will match a <a href="https://en.wikipedia.org/wiki/Checksum">Checksum 32</a> value.  
+This <a href="https://en.wikipedia.org/wiki/Psion_Organiser"> Organiser II</a> <a href="https://en.wikipedia.org/wiki/Open_Programming_Language">OPL program</a> reads the used space of a data pack and calculates a check sum for the pack. This checksum value will match a <a href="https://en.wikipedia.org/wiki/Checksum">Checksum 32</a> value.  
 
 <div align="center">
   <div style="display: flex; align-items: flex-start;">
@@ -73,7 +73,7 @@ Version 0.3 will include verification of the pack header checksum for all packs.
 
 A PSION Organiser 2 .OPK file is <a href="https://github.com/nofitnessforpurpose/CHECKSUM/blob/main/code/chksum02/CHKSUM02.opk">available</a> which contains both source and object code. This file can be downloaded onto a data pack using a COMMS link and tools such as <a href="https://www.lostgallifreyan.net/Software/ORG-Link/ORG-Link.htm">ORG-LINK</a> or <a href="https://www.jaapsch.net/psion/connect.htm">similar</a>.
 
-When down loaded and programmed onto a data pack, run the CHKSUMxx progam from the data pack. The program will allow selection of the Drive of the target data pack e.g. B: 
+When down loaded and programmed onto a data pack, run the CHKSUMxx program from the data pack. The program will allow selection of the Drive of the target data pack e.g. B: 
 The tool should then determine the size of the used data space on the data pack and calculate the check sum for the target data pack. 
 When the data pack containing the utility is selected, the cacluated value should match the value shown for the current release of the software.
 When the values match there is a limited liklihood of issue with the data pack, source data or data transfer process.  
