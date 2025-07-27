@@ -69,7 +69,7 @@ Version 0.3 will include verification of the pack header checksum for all packs.
 <br>  
 
 ## Installation
-<img src="https://github.com/nofitnessforpurpose/CHECKSUM/blob/main/images/OPK.jpg">  
+<img src="https://github.com/nofitnessforpurpose/CHECKSUM/blob/main/images/OPK.jpg" alt="Image by Martin Reid - https://sites.google.com/site/martin2reid">  
 
 A PSION Organiser 2 .OPK file is <a href="https://github.com/nofitnessforpurpose/CHECKSUM/blob/main/code/chksum02/CHKSUM02.opk">available</a> which contains both source and object code. This file can be downloaded onto a data pack using a COMMS link and tools such as <a href="https://www.lostgallifreyan.net/Software/ORG-Link/ORG-Link.htm">ORG-LINK</a> or <a href="https://www.jaapsch.net/psion/connect.htm">similar</a>.
 
