@@ -50,7 +50,7 @@ Two Checksum values can be calculated:
 |  Type    | Description                                                    |
 | -------- | ---------------------------------------------------------------|
 |  <strong>Normal</strong>  | The principal pack content which excludes the header which can vary by creation date and pack type |
-|  <strong>All</strong>     | All the pack data which includes the header |  
+|  <strong>All</strong>     | All the pack data which includes the pack header and .OPK header |  
 
 The sum of bytes checksums for revision 2 .OPK included in the distribution are:  
 | Type     | Value                                                          |
