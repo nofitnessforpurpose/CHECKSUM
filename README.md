@@ -130,7 +130,7 @@ A <strong>Normal</strong> checksum calculation commences at absolute pack addres
 <BR>
 
 ## Known Limitations
-The code uses built in Organiser II ROM system routines to access data packs, this means a pack header must be valid for the program to operate. i.e. The Code will not operate with a pack that returns an invalid pack header, as the ROM routines will determine they are unable to determine how to access the data pack and stop operation on the data pack.  
+The code uses built in Organiser II ROM system routines to access data packs, this means a pack header must be valid for the program to operate. i.e. The code will not operate with a pack that returns an invalid pack header, as the ROM routines will determine they are unable to determine how to access the data pack and stop operation on the data pack.  
 
 <BR>
 
