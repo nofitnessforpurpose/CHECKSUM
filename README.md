@@ -129,6 +129,11 @@ A <strong>Normal</strong> checksum calculation commences at absolute pack addres
 
 <BR>
 
+## Known Limitations
+The code uses built in Organiser ROM system routines to access data packs. This means a pack must be valid for the program to operate. i.e. The Code will not operate with a pack that returns an invalid pack header, as the ROM routines will determine they are unable to determine how to access the data pack and stop operation on the data pack.  
+
+<BR>
+
 ## Attribution
 The original pack read code is drawn from the <a href="https://www.jaapsch.net/psion/software/opl/sendpack.zip">SENDPACK</a> program by Jaap Scherphuis, psion@jaapsch.net. 
 The code was modified and adapted to generate values as would be obtained using <a href="https://www.lostgallifreyan.net/Software/ORG-Link/ORG-Link.htm">ORG-LINK</a> pack upload feature generating a .OPK file.  
