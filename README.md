@@ -1,7 +1,7 @@
 # CHKSUM
 Calculate the check sum of used space on a data pack that matches ORG-LINK pack .OPK images.
 
-This <a href="https://en.wikipedia.org/wiki/Psion_Organiser"> Organiser II</a> <a href="https://en.wikipedia.org/wiki/Open_Programming_Language">OPL program</a> reads the used space of a data pack and calculates a check sum for the pack. This checksum value will match a <a href="https://en.wikipedia.org/wiki/Checksum">Checksum 32</a> value.  
+This <a href="https://en.wikipedia.org/wiki/Psion_Organiser"> Organiser II</a> <a href="https://en.wikipedia.org/wiki/Open_Programming_Language">OPL program</a> reads the used space of a data pack and calculates a check sum for the pack. This checksum value will match a <a href="https://en.wikipedia.org/wiki/Checksum">Checksum 32</a> value <a href="https://github.com/nofitnessforpurpose/CHECKSUM/blob/main/data/checksums.csv">here</a>.  
 
 <div align="center">
   <div style="display: flex; align-items: flex-start;">
