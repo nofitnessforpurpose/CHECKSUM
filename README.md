@@ -33,7 +33,7 @@ Calculation comprises the used areas of the pack, including items marked deleted
 
 <div align="center">
   <div style="display: flex; align-items: flex-start;">
-    <img src="https://github.com/nofitnessforpurpose/CHECKSUM/blob/main/images/2025-07-22%2012-37-59.gif?raw=true" width="200px" alt="NotFitForPurpose Image copyright (c) 22 July 2025 nofitnessforpurpose All Rights Reserved">
+    <img src="https://github.com/nofitnessforpurpose/CHECKSUM/blob/main/images/2025-07-22%2012-37-59.gif" width="200px" alt="NotFitForPurpose Image copyright (c) 22 July 2025 nofitnessforpurpose All Rights Reserved">
   </div>
 </div>
 
