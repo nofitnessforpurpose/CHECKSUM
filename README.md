@@ -5,7 +5,7 @@ This <a href="https://en.wikipedia.org/wiki/Psion_Organiser"> Organiser II</a> <
 
 <div align="center">
   <div style="display: flex; align-items: flex-start;">
-    <img src="https://github.com/nofitnessforpurpose/CHECKSUM/blob/main/images/CHECKSUM-01.jpg?raw=true" width="400px" alt="NotFitForPurpose Image copyright (c) 01 July 2025 nofitnessforpurpose All Rights Reserved">
+    <img src="https://github.com/nofitnessforpurpose/CHECKSUM/blob/main/images/CHECKSUM-01.jpg" width="400px" alt="NotFitForPurpose Image copyright (c) 01 July 2025 nofitnessforpurpose All Rights Reserved">
   </div>
 </div>
 <BR>
